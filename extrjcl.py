@@ -23,7 +23,12 @@ for member in memberList:
         line = line.rstrip()
 #
         if ('//*' == line[5:8]) or ('//' != line[5:7]):
-            continue
+            if ('XX*' == line[5:8]) or ('XX' != line[5:7]):
+                continue
+            else:
+                pass
+#   
+        
 #   
         wsPGMfnd = re.findall('PGM=[A-Z0-9]+',line)        
         if len(wsPGMfnd) > 0:
